@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CasaRentPay — Rent, reimagined for Ghana.</title>
-  <meta name="description" content="CasaRentPay is Ghana's Mobile Money-native rent payment and property management platform, built for landlords and tenants across Accra." />
+  <meta name="description" content="CasaRentPay is Ghana's Mobile Money-native rent payment and property management web app, built for landlords and tenants across Accra. Sign up in minutes at casarentpay.app." />
+  <link rel="canonical" href="https://casarentpay.com/" />
   <meta name="theme-color" content="#060b18" />
   <meta property="og:title" content="CasaRentPay — Rent, reimagined for Ghana." />
   <meta property="og:description" content="Pay rent with Mobile Money. Track your space. Get reminded before you're late." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://casarentpay.com/" />
+  <meta property="og:site_name" content="CasaRentPay" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CasaRentPay — Rent, reimagined for Ghana." />
+  <meta name="twitter:description" content="Pay rent with Mobile Money. Track your space. Get reminded before you're late." />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
@@ -287,25 +293,8 @@
       z-index: 1;
     }
 
-    .hero-input {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--navy-border);
-      border-radius: 100px;
-      padding: 15px 26px;
-      font-size: 15px;
-      font-family: 'Inter', sans-serif;
-      outline: none;
-      width: 290px;
-      color: var(--white);
-      transition: border-color 0.2s, background 0.2s;
-    }
 
-    .hero-input:focus {
-      border-color: var(--green);
-      background: rgba(29,158,117,0.05);
-    }
 
-    .hero-input::placeholder { color: rgba(255,255,255,0.25); }
 
     .hero-btn {
       background: var(--green);
@@ -325,6 +314,7 @@
     }
 
     .hero-btn svg { width: 16px; height: 16px; flex-shrink: 0; transition: transform 0.2s; }
+    a.hero-btn { text-decoration: none; }
     .hero-btn:hover svg { transform: translateX(3px); }
 
     .hero-btn:hover {
@@ -734,154 +724,39 @@
       color: var(--green-bright);
     }
 
-    /* ─── WAITLIST ─── */
-    .waitlist-wrap {
-      text-align: center;
-      max-width: 680px;
+    /* ─── CTA ─── */
+    .cta-wrap {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 100px 24px;
+      padding: 96px 48px;
+      text-align: center;
     }
-
-    .waitlist-wrap .section-label { justify-content: center; }
-    .waitlist-wrap .section-title { margin-bottom: 16px; }
-    .waitlist-wrap .section-sub { margin: 0 auto 48px; }
-
-    .waitlist-form {
+    .cta-wrap .section-label { justify-content: center; }
+    .cta-wrap .section-title { margin-bottom: 16px; }
+    .cta-wrap .section-sub { margin: 0 auto 36px; }
+    .cta-actions {
       display: flex;
-      gap: 12px;
+      gap: 16px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 20px;
+      align-items: center;
+      margin-bottom: 28px;
     }
-
-    .waitlist-input {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--navy-border);
-      border-radius: 100px;
-      padding: 15px 26px;
-      font-size: 15px;
-      font-family: 'Inter', sans-serif;
-      outline: none;
-      flex: 1;
-      min-width: 220px;
-      max-width: 300px;
+    .cta-link {
       color: var(--white);
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .waitlist-input:focus {
-      border-color: var(--green);
-      background: rgba(29,158,117,0.05);
-    }
-
-    .waitlist-input::placeholder { color: rgba(255,255,255,0.25); }
-
-    .waitlist-btn {
-      background: var(--green);
-      color: var(--white);
-      border: none;
-      border-radius: 100px;
-      padding: 15px 32px;
       font-size: 15px;
       font-weight: 600;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: background 0.2s, box-shadow 0.2s;
-      white-space: nowrap;
+      text-decoration: none;
+      padding: 15px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
     }
-
-    .waitlist-btn:hover {
-      background: var(--green-bright);
-      box-shadow: 0 8px 32px rgba(29,158,117,0.35);
-    }
-
-    .waitlist-note {
+    .cta-link:hover { border-bottom-color: var(--green); }
+    .cta-note {
       font-size: 13px;
       color: var(--muted);
     }
-    .waitlist-note a { color: var(--green); text-decoration: none; }
-    .waitlist-note a:hover { text-decoration: underline; }
-
-    /* ─── DOWNLOAD ─── */
-    .download-bg {
-      background: var(--navy-mid);
-      border-top: 1px solid var(--navy-border);
-      text-align: center;
-    }
-
-    .download-inner {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    .download-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .download-text {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 36px;
-      line-height: 1.6;
-    }
-
-    .download-btns {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .download-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--navy-border);
-      color: var(--white);
-      border-radius: 16px;
-      padding: 16px 28px;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .download-btn:hover {
-      border-color: rgba(29,158,117,0.4);
-      background: rgba(29,158,117,0.05);
-    }
-
-    .download-btn-icon {
-      width: 26px;
-      height: 26px;
-      display: block;
-      flex-shrink: 0;
-    }
-
-    .download-btn-text {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .download-btn-sub {
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 2px;
-      display: block;
-    }
-
-    .download-btn-main {
-      font-size: 15px;
-      font-weight: 700;
-      display: block;
-    }
+    .cta-note a { color: var(--green); text-decoration: none; }
+    .cta-note a:hover { text-decoration: underline; }
 
     /* ─── FOOTER ─── */
     footer {
@@ -992,7 +867,7 @@
     <a href="#about">About</a>
     <a href="mailto:info@casarentpay.com">Contact</a>
   </div>
-  <a class="nav-cta" href="#waitlist">Join waitlist</a>
+  <a class="nav-cta" href="https://casarentpay.app">Launch App</a>
 </nav>
 
 <!-- HERO -->
@@ -1003,7 +878,7 @@
 
   <div class="hero-badge">
     <span class="hero-badge-dot"></span>
-    Registered Ghanaian business — launching late 2026
+    Registered Ghanaian business · Early access now open
   </div>
 
   <h1>Rent, <em>reimagined</em><br/>for <span class="gold">Ghana.</span></h1>
@@ -1011,10 +886,8 @@
   <p class="hero-sub">Pay rent with Mobile Money. Track your space. Get reminded before you're late. Built for how Ghana actually lives.</p>
 
   <div class="hero-form">
-    <input class="hero-input" type="email" id="heroEmail" placeholder="Your email address" />
-    <button class="hero-btn" onclick="joinWaitlist('heroEmail','heroSuccess','heroForm')">Get early access <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button>
+    <a class="hero-btn" href="https://casarentpay.app">Launch App <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
   </div>
-  <div id="heroSuccess" class="success-msg"><svg viewBox="0 0 24 24"><use href="#i-check-circle"/></svg>You're on the list. We'll reach out when CasaRentPay launches.</div>
 
   <div class="hero-social-proof">
     <div class="hero-avatars">
@@ -1023,7 +896,7 @@
       <div class="hero-avatar"></div>
       <div class="hero-avatar"></div>
     </div>
-    <span>200+ landlords and tenants already on the list</span>
+    <span>200+ landlords and tenants on our early-access list</span>
   </div>
 </section>
 
@@ -1062,21 +935,21 @@
     <div class="how-grid">
       <div class="how-card">
         <p class="how-step">Step 01</p>
-        <div class="how-icon"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></div>
-        <h3>Sign up with your number</h3>
-        <p>No passwords. No paperwork. Enter your Ghana phone number, verify with a one-time SMS code and you are in. Works for both landlords and tenants.</p>
+        <div class="how-icon"><svg viewBox="0 0 24 24"><use href="#i-key"/></svg></div>
+        <h3>Create your account</h3>
+        <p>Sign up with your email and a password, confirm the 6-digit code we email you, and you are in. One sign-in works for both landlords and tenants, on any phone or laptop.</p>
       </div>
       <div class="how-card">
         <p class="how-step">Step 02</p>
         <div class="how-icon"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></div>
-        <h3>Find a room or list yours</h3>
-        <p>Tenants browse verified available rooms with real pricing. Landlords list properties and manage all their rooms and tenants from a single dashboard.</p>
+        <h3>Verify, then list or find a room</h3>
+        <p>Verify your identity once with your Ghana Card. Tenants browse available rooms with real pricing. Landlords list properties and manage all their rooms and tenants from a single dashboard.</p>
       </div>
       <div class="how-card">
         <p class="how-step">Step 03</p>
         <div class="how-icon"><svg viewBox="0 0 24 24"><use href="#i-card"/></svg></div>
         <h3>Pay or collect instantly</h3>
-        <p>Tap to pay rent with MTN MoMo, Telecel Cash or AirtelTigo. Landlords get notified the moment money lands. Both parties get a digital receipt.</p>
+        <p>Pay rent with MTN MoMo, Telecel Cash or AirtelTigo. Landlords get notified the moment money lands. Both parties get a digital receipt.</p>
       </div>
     </div>
   </div>
@@ -1086,7 +959,7 @@
 <div id="features">
   <div class="section-wrap">
     <p class="section-label">Features</p>
-    <h2 class="section-title">Everything rent,<br/><em>in one app.</em></h2>
+    <h2 class="section-title">Everything rent,<br/><em>in one place.</em></h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></div>
@@ -1111,12 +984,12 @@
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><use href="#i-key"/></svg></div>
         <h3>Room requests</h3>
-        <p>Tenants request rooms directly through the app. Landlords approve or decline with one tap. Clean, digital and traceable.</p>
+        <p>Tenants request rooms directly on CasaRentPay. Landlords approve or decline with one tap. Clean, digital and traceable.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
         <h3>Built for Ghana</h3>
-        <p>Mobile Money native. Ghana Card compatible. Low-bandwidth optimised. Designed from scratch for how Ghanaians actually live and pay.</p>
+        <p>Mobile Money native. Ghana Card compatible. Works in your browser, nothing to install. Designed from scratch for how Ghanaians actually live and pay.</p>
       </div>
     </div>
   </div>
@@ -1134,7 +1007,7 @@
         <div class="about-stats">
           <div class="stat-box">
             <div class="stat-number">2026</div>
-            <div class="stat-label">Launching in Ghana</div>
+            <div class="stat-label">Opening in Ghana</div>
           </div>
           <div class="stat-box">
             <div class="stat-number">3</div>
@@ -1146,7 +1019,7 @@
           </div>
           <div class="stat-box">
             <div class="stat-number">1</div>
-            <div class="stat-label">App for everything rent</div>
+            <div class="stat-label">Place for everything rent</div>
           </div>
         </div>
       </div>
@@ -1212,51 +1085,17 @@
   </div>
 </div>
 
-<!-- WAITLIST -->
-<div id="waitlist">
-  <div class="waitlist-wrap">
-    <p class="section-label">Join the waitlist</p>
-    <h2 class="section-title">Be first<br/>when we <em>launch.</em></h2>
-    <p class="section-sub">We are launching with a select group of landlords and tenants. Get early access and help shape how CasaRentPay works from day one.</p>
-    <div class="waitlist-form" id="waitlistForm">
-      <input class="waitlist-input" type="email" id="waitlistEmail" placeholder="Your email address" />
-      <button class="waitlist-btn" onclick="joinWaitlist('waitlistEmail','waitlistSuccess','waitlistForm')">Join waitlist</button>
+<!-- CTA -->
+<div id="start">
+  <div class="cta-wrap">
+    <p class="section-label">Get started</p>
+    <h2 class="section-title">Ready to <em>get started?</em></h2>
+    <p class="section-sub">Create your free account in a few minutes. No download needed, it works in your browser on any phone or laptop.</p>
+    <div class="cta-actions">
+      <a class="hero-btn" href="https://casarentpay.app">Launch App <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+      <a class="cta-link" href="https://casarentpay.app">Already have an account? Sign in</a>
     </div>
-    <div id="waitlistSuccess" class="success-msg"><svg viewBox="0 0 24 24"><use href="#i-check-circle"/></svg>You're on the list. We'll reach out when CasaRentPay launches.</div>
-    <p class="waitlist-note">Questions? Email us at <a href="mailto:info@casarentpay.com">info@casarentpay.com</a></p>
-  </div>
-</div>
-
-<!-- DOWNLOAD -->
-<div class="download-bg">
-  <div class="download-inner">
-    <p class="download-label">Get the app</p>
-    <p class="download-text">CasaRentPay is coming to Android and iOS. Join the waitlist above to get notified the moment we go live.</p>
-    <div class="download-btns">
-      <a href="#waitlist" class="download-btn" aria-label="Google Play">
-        <svg class="download-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#00D1FF" d="M3.1 2.7c-.3.4-.5 1-.5 1.8v15c0 .8.2 1.4.5 1.8l8.9-8.9-8.9-9.7Z"/>
-          <path fill="#00E1A0" d="M12.1 11.4 3.1 2.7l9.5 9.2 3.4-3.3-3.9-3.4Z"/>
-          <path fill="#FFCF33" d="M12.1 12.6l3.9-3.8-9.9 9.7 9.9-9.1 3.4 3.3-3.4 3.3Z"/>
-          <path fill="#FF6F61" d="M3.1 21.3c.3.4.9.7 1.7.7h.9L12.1 12.6 3.1 21.3Z"/>
-          <path fill="#FF3A44" d="M16.6 9.7 20.5 7.9c1.1-.6 1.4-1.9.8-3-.6-1.1-1.9-1.3-3-.8l-1.7.9 3.2 4.7Z"/>
-          <path fill="#FF3A44" d="M16.5 14.1l-3.4 3.3 9.1-8.8c1.1-.9 1.2-2.4.4-3.5-.8-1.1-2.2-1.2-3.2-.4l-3.6 3.4Z"/>
-        </svg>
-        <span class="download-btn-text">
-          <span class="download-btn-sub">Coming soon</span>
-          <span class="download-btn-main">Google Play</span>
-        </span>
-      </a>
-      <a href="#waitlist" class="download-btn" aria-label="App Store">
-        <svg class="download-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M15.1 12.4c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.8-.8-2.9-.8C5.6 7.5 4 8.7 3.3 10.5c-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.6 2.1 2.8 2.1 1.1 0 1.5-.7 2.9-.7s1.8.7 2.9.7c1.2 0 2-.9 2.7-2 .9-1.3 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.6-3.1Zm-2.1-6.1c.6-.7 1-1.7.9-2.7-.9.1-2 .6-2.7 1.3-.6.7-1.1 1.7-.9 2.7.9.1 2-.5 2.7-1.3Z"/>
-        </svg>
-        <span class="download-btn-text">
-          <span class="download-btn-sub">Coming soon</span>
-          <span class="download-btn-main">App Store</span>
-        </span>
-      </a>
-    </div>
+    <p class="cta-note">Questions? Email us at <a href="mailto:info@casarentpay.com">info@casarentpay.com</a></p>
   </div>
 </div>
 
@@ -1271,7 +1110,7 @@
   </div>
   <div class="footer-links">
     <a href="mailto:info@casarentpay.com">Contact</a>
-    <a href="#waitlist">Early access</a>
+    <a href="https://casarentpay.app">Launch App</a>
     <a href="#how">How it works</a>
     <a href="#features">Features</a>
   </div>
@@ -1287,29 +1126,6 @@
 </footer>
 
 <script>
-  function joinWaitlist(inputId, successId, formId) {
-    const input = document.getElementById(inputId);
-    const success = document.getElementById(successId);
-    const form = document.getElementById(formId);
-    const email = input ? input.value.trim() : '';
-
-    if (!email || !email.includes('@')) {
-      if (input) {
-        input.style.borderColor = '#EF4444';
-        input.placeholder = 'Please enter a valid email';
-        setTimeout(() => {
-          input.style.borderColor = '';
-          input.placeholder = 'Your email address';
-        }, 2500);
-      }
-      return;
-    }
-
-    if (form) form.style.display = 'none';
-    if (success) success.style.display = 'flex';
-    console.log('Waitlist signup:', email);
-  }
-
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
